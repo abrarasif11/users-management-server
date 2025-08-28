@@ -13,6 +13,12 @@ app.get('/users', (req, res) => {
     res.send(users)
 })
 
+// create server site API 
+app.post('/users', (req, res) => {
+    console.log("Post API hitting")
+    console.log(req.body)
+})
+
 // for server running // 
 
 app.get('/', (req, res) => {
