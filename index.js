@@ -1,6 +1,17 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 6969;
+const users = require('./user.json');
+const cors = require('cors')
+
+// middle ware // 
+app.use(cors());
+
+
+// get user data // 
+app.get('/users', (req, res) => {
+    res.send(users)
+})
 
 // for server running // 
 
