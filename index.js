@@ -6,7 +6,7 @@ const cors = require('cors')
 
 // middle ware // 
 app.use(cors());
-
+app.use(express.json());
 
 // get user data // 
 app.get('/users', (req, res) => {
